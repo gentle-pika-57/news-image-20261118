@@ -1,8 +1,12 @@
-"""news-image-20261118: copy the entry image to the output directory.
+"""news-image-20261118 v2: copy the entry image to the output directory.
 
 The image (entry.png, in this repository) sums up the world news of
-Wednesday 18 November 2026. Standard library only, no network; the copy
-is byte-for-byte, so repeated runs write identical bytes.
+Wednesday 18 November 2026: 41 verified stories on one newspaper front
+page (11 numbered leads with a dotted world map, 30 more in the
+"also on" list, stat boxes and a date-check strip). Standard library
+only, no network; the copy is byte-for-byte, so repeated runs write
+identical bytes. The image is 1024x1024 PNG, 290,101 bytes, inside the
+1 MiB / 1024x1024 limits.
 """
 
 import os

@@ -5,179 +5,190 @@
 <title>18 November 2026 — World news in one image</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #888; font-family: "Noto Sans", "DejaVu Sans", sans-serif; }
+  body { background: #888; font-family: "Noto Sans", "DejaVu Sans", Arial, sans-serif; }
   .page { width: 1024px; height: 1024px; background: #f7f3ea; margin: 0 auto; overflow: hidden; display: flex; flex-direction: column; }
-  /* ---------- header ---------- */
-  .header { background: #0e2340; color: #fff; padding: 18px 28px 16px; display: flex; justify-content: space-between; align-items: flex-end; }
-  .header .kicker { font-size: 17px; letter-spacing: 5px; color: #e8b64c; font-weight: 700; }
-  .header h1 { font-size: 60px; line-height: 1.02; font-weight: 800; letter-spacing: 0.5px; }
-  .header h1 .yr { color: #e8b64c; }
-  .header .right { text-align: right; padding-bottom: 6px; }
-  .header .right .tag { font-size: 19px; font-weight: 700; letter-spacing: 2px; }
-  .header .right .sub { font-size: 14px; color: #b9c6d8; letter-spacing: 1px; margin-top: 4px; }
-  /* ---------- hero ---------- */
-  .hero { display: flex; gap: 24px; padding: 16px 28px 12px; border-bottom: 3px solid #0e2340; }
-  .flags { display: flex; gap: 14px; align-items: center; flex-shrink: 0; }
-  .flag { width: 132px; height: 88px; position: relative; box-shadow: 0 2px 6px rgba(0,0,0,.35); }
-  .flag.cn { background: #de2910; }
-  .flag.cn .star { color: #ffde00; position: absolute; font-size: 30px; line-height: 1; left: 10px; top: 8px; }
-  .flag.cn .s2 { font-size: 12px; left: 46px; top: 8px; }
-  .flag.cn .s3 { font-size: 12px; left: 56px; top: 22px; }
-  .flag.cn .s4 { font-size: 12px; left: 52px; top: 38px; }
-  .flag.cn .s5 { font-size: 12px; left: 38px; top: 46px; }
-  .flag.ru { background: linear-gradient(#fff 0 33.3%, #0039a6 33.3% 66.6%, #d52b1e 66.6% 100%); }
-  .flag.us { background: repeating-linear-gradient(#b22234 0 6.77px, #fff 6.77px 13.54px); }
-  .flag.us .canton { position: absolute; left: 0; top: 0; width: 53px; height: 47px; background: #3c3b6e; color: #fff; font-size: 8px; line-height: 9px; letter-spacing: 2px; padding: 4px 0 0 4px; }
-  .flag .cap { position: absolute; bottom: -24px; left: 0; right: 0; text-align: center; font-size: 14px; font-weight: 700; letter-spacing: 2px; color: #333; }
-  .hero .text { flex: 1; }
-  .hero .kick { font-size: 16px; font-weight: 800; letter-spacing: 3px; color: #b3271e; }
-  .hero h2 { font-size: 45px; line-height: 1.08; font-weight: 800; color: #0e2340; margin: 6px 0 8px; }
-  .hero p { font-size: 21px; line-height: 1.35; color: #2c2c2c; }
-  .hero p b { color: #0e2340; }
-  /* ---------- grid ---------- */
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 14px 28px 2px; }
-  .tile { background: #fff; border: 2px solid #0e2340; border-radius: 10px; padding: 12px 16px 10px; display: flex; gap: 14px; height: 220px; }
-  .tile .art { width: 128px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
-  .tile .body { flex: 1; }
-  .tile .kick { font-size: 13px; font-weight: 800; letter-spacing: 2.5px; color: #b3271e; }
-  .tile h3 { font-size: 27px; line-height: 1.12; font-weight: 800; color: #0e2340; margin: 5px 0 6px; }
-  .tile p { font-size: 17px; line-height: 1.32; color: #333; }
-  .tile .big { font-size: 40px; font-weight: 800; color: #0e2340; line-height: 1; margin: 4px 0 2px; }
-  .tile .big .up { color: #1e7d32; }
-  /* ---------- also strip ---------- */
-  .also { margin: 12px 28px 0; background: #0e2340; color: #fff; border-radius: 10px; padding: 13px 20px 12px; flex: none; }
-  .also .label { font-size: 14px; font-weight: 800; letter-spacing: 3px; color: #e8b64c; margin-bottom: 10px; }
-  .also .items { display: flex; gap: 28px; }
-  .also .item { flex: 1; font-size: 19px; line-height: 1.35; }
-  .also .item b { color: #e8b64c; }
-  .foot { text-align: center; font-size: 13px; color: #8a8578; padding: 0; letter-spacing: 1px; height: 30px; line-height: 30px; flex: none; }
+  .serif { font-family: Georgia, "Times New Roman", "DejaVu Serif", serif; }
+  /* ---------- masthead ---------- */
+  .mast { background: #0e2340; color: #fff; padding: 8px 20px 7px; flex: 0 0 auto; }
+  .mast .row1 { display: flex; justify-content: space-between; font-size: 12px; letter-spacing: 4px; font-weight: 700; color: #e8b64c; }
+  .mast .row2 { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 2px; }
+  .mast h1 { font-size: 54px; line-height: 1; font-weight: 800; letter-spacing: 0.5px; }
+  .mast h1 .yr { color: #e8b64c; }
+  .mast .right { text-align: right; padding-bottom: 3px; }
+  .mast .right .big { font-size: 17px; font-weight: 700; letter-spacing: 2px; }
+  .mast .right .small { font-size: 11px; color: #b9c6d8; letter-spacing: 1.5px; margin-top: 3px; }
+  /* ---------- hero (lead 1) ---------- */
+  .hero { display: flex; gap: 16px; padding: 8px 20px 7px; border-bottom: 3px solid #0e2340; align-items: center; flex: 0 0 auto; }
+  .flags { display: flex; gap: 8px; flex: 0 0 auto; }
+  .hero .text { flex: 1 1 auto; min-width: 0; }
+  .hero .kick { font-size: 11px; font-weight: 800; letter-spacing: 2px; color: #b3202a; }
+  .hero h2 { font-size: 21px; line-height: 1.18; font-weight: 800; margin: 2px 0 3px; }
+  .hero p { font-size: 12.5px; line-height: 1.35; color: #2b2b2b; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  /* ---------- map + stats ---------- */
+  .maprow { display: flex; gap: 16px; padding: 5px 20px 5px; border-bottom: 1px solid #9aa5b1; flex: 0 0 auto; }
+  .mapbox { flex: 0 0 auto; }
+  .mapbox .lab { font-size: 11px; font-weight: 800; letter-spacing: 2px; color: #0e2340; margin-bottom: 2px; }
+  .stats { flex: 1 1 auto; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 7px; padding-top: 15px; }
+  .stat { background: #fff; border: 1px solid #c9c2b2; padding: 6px 9px; }
+  .stat .n { font-size: 25px; font-weight: 800; color: #0e2340; line-height: 1.05; }
+  .stat .l { font-size: 10.5px; line-height: 1.25; color: #444; margin-top: 2px; }
+  /* ---------- leads grid ---------- */
+  .leads { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; padding: 5px 20px 0; flex: 0 0 auto; }
+  .tile { display: flex; gap: 7px; align-items: flex-start; background: #fff; border: 1px solid #d8d2c2; padding: 5px 7px; height: 76px; overflow: hidden; }
+  .tile .num { flex: 0 0 auto; width: 21px; height: 21px; border-radius: 50%; background: #b3202a; color: #fff; font-size: 12px; font-weight: 800; text-align: center; line-height: 21px; margin-top: 2px; }
+  .tile .art { flex: 0 0 auto; width: 50px; height: 50px; margin-top: 1px; }
+  .tile .tx { flex: 1 1 auto; min-width: 0; }
+  .tile h3 { font-size: 13.5px; line-height: 1.2; font-weight: 800; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .tile h3 .k { color: #b3202a; }
+  .tile p { font-size: 11px; line-height: 1.3; color: #333; margin-top: 2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  /* ---------- also on ---------- */
+  .also { background: #0e2340; color: #fff; margin: 5px 20px 0; padding: 5px 12px 7px; flex: 0 0 auto; }
+  .also h3 { font-size: 12px; letter-spacing: 2px; font-weight: 800; color: #e8b64c; margin-bottom: 3px; }
+  .also .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px 12px; }
+  .also .grid div { font-size: 9.5px; line-height: 13.5px; white-space: nowrap; overflow: hidden; }
+  .also .grid b { color: #e8b64c; }
+  /* ---------- date check + footer ---------- */
+  .datecheck { background: #e8b64c; color: #0e2340; margin: 5px 20px 0; padding: 4px 14px; font-size: 11.5px; line-height: 1.3; font-weight: 700; flex: 0 0 auto; }
+  .foot { padding: 6px 20px 8px; font-size: 10px; color: #666; text-align: center; flex: 0 0 auto; }
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="header">
-    <div>
-      <div class="kicker">WEDNESDAY &middot; THE WORLD IN ONE IMAGE</div>
-      <h1>18 NOVEMBER <span class="yr">2026</span></h1>
-    </div>
-    <div class="right">
-      <div class="tag">WORLD NEWS</div>
-      <div class="sub">One day &middot; Seven stories</div>
+  <!-- masthead -->
+  <div class="mast">
+    <div class="row1"><span>THE WORLD TODAY &mdash; ONE DAY, ONE PAGE</span><span>WEDNESDAY</span></div>
+    <div class="row2">
+      <h1 class="serif">18 NOVEMBER <span class="yr">2026</span></h1>
+      <div class="right"><div class="big">41 STORIES &middot; 6 REGIONS</div><div class="small">VERIFIED: AP &middot; REUTERS &middot; AFP &middot; BBC</div></div>
     </div>
   </div>
 
+  <!-- hero: lead 1 -->
   <div class="hero">
     <div class="flags">
-      <div class="flag cn"><span class="star">&#9733;</span><span class="star s2">&#9733;</span><span class="star s3">&#9733;</span><span class="star s4">&#9733;</span><span class="star s5">&#9733;</span><div class="cap">CHINA</div></div>
-      <div class="flag ru"><div class="cap">RUSSIA</div></div>
-      <div class="flag us"><div class="canton">&#9733;&#9733;&#9733;&#9733;<br>&#9733;&#9733;&#9733;&#9733;<br>&#9733;&#9733;&#9733;&#9733;</div><div class="cap">UNITED STATES</div></div>
+      <svg width="84" height="56" viewBox="0 0 84 56"><rect width="84" height="56" fill="#de2910"/><text x="7" y="24" font-size="22" fill="#ffde00">&#9733;</text><text x="34" y="12" font-size="9" fill="#ffde00">&#9733;</text><text x="42" y="22" font-size="9" fill="#ffde00">&#9733;</text><text x="40" y="33" font-size="9" fill="#ffde00">&#9733;</text><text x="30" y="38" font-size="9" fill="#ffde00">&#9733;</text></svg>
+      <svg width="84" height="56" viewBox="0 0 84 56"><rect width="84" height="18.7" fill="#fff"/><rect y="18.7" width="84" height="18.7" fill="#0039a6"/><rect y="37.3" width="84" height="18.7" fill="#d52b1e"/></svg>
+      <svg width="84" height="56" viewBox="0 0 84 56"><rect width="84" height="56" fill="#b22234"/><g fill="#fff"><rect y="4.3" width="84" height="4.3"/><rect y="12.9" width="84" height="4.3"/><rect y="21.5" width="84" height="4.3"/><rect y="30.1" width="84" height="4.3"/><rect y="38.7" width="84" height="4.3"/><rect y="47.3" width="84" height="4.3"/></g><rect width="34" height="30" fill="#3c3b6e"/><g fill="#fff"><circle cx="5" cy="5" r="1.3"/><circle cx="12" cy="5" r="1.3"/><circle cx="19" cy="5" r="1.3"/><circle cx="26" cy="5" r="1.3"/><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/><circle cx="26" cy="12" r="1.3"/><circle cx="5" cy="19" r="1.3"/><circle cx="12" cy="19" r="1.3"/><circle cx="19" cy="19" r="1.3"/><circle cx="26" cy="19" r="1.3"/><circle cx="5" cy="26" r="1.3"/><circle cx="12" cy="26" r="1.3"/><circle cx="19" cy="26" r="1.3"/><circle cx="26" cy="26" r="1.3"/></g></svg>
     </div>
     <div class="text">
-      <div class="kick">APEC &middot; SHENZHEN, CHINA</div>
-      <h2>XI AND PUTIN MEET AS TRUMP LANDS</h2>
-      <p>China&rsquo;s Xi Jinping and Russia&rsquo;s Vladimir Putin hold talks in Shenzhen &mdash; a day before the <b>first-ever three-way summit</b> with US President Donald Trump.</p>
+      <div class="kick">1 &middot; SHENZHEN &mdash; THE DAY&rsquo;S TOP STORY</div>
+      <h2 class="serif">XI AND PUTIN MEET IN SHENZHEN AS TRUMP LANDS FOR THURSDAY&rsquo;S FIRST-EVER TRILATERAL SUMMIT</h2>
+      <p>China&rsquo;s Xi Jinping and Russia&rsquo;s Vladimir Putin hold talks in Shenzhen on the eve of the first-ever three-way summit with Donald Trump, who arrived in China on Wednesday. (AP/AFP/BBC)</p>
     </div>
   </div>
 
-  <div class="grid">
-    <div class="tile">
-      <div class="art">
-        <svg width="120" height="110" viewBox="0 0 120 110">
-          <polygon points="100,2 104,14 116,14 107,22 110,34 100,27 90,34 93,22 84,14 96,14" fill="#f39c12"/>
-          <g fill="#1f2a37">
-            <ellipse cx="52" cy="62" rx="26" ry="12"/>
-            <rect x="20" y="56" width="18" height="4" transform="rotate(-18 20 58)"/>
-            <rect x="82" y="52" width="18" height="4" transform="rotate(18 82 54)"/>
-            <circle cx="16" cy="50" r="7" fill="none" stroke="#1f2a37" stroke-width="3"/>
-            <circle cx="100" cy="50" r="7" fill="none" stroke="#1f2a37" stroke-width="3"/>
-            <rect x="46" y="72" width="12" height="14" rx="2"/>
-          </g>
-          <path d="M30 92 Q52 100 76 92" stroke="#b3271e" stroke-width="4" fill="none"/>
-        </svg>
-      </div>
-      <div class="body">
-        <div class="kick">MIDDLE EAST &middot; GULF</div>
-        <h3>IRAN STRIKES US BASES</h3>
-        <p>Tehran says its drones hit US sites in <b>Kuwait and Bahrain</b> after the US struck Qeshm Island in the Strait of Hormuz.</p>
-      </div>
+  <!-- map + stats -->
+  <div class="maprow">
+    <div class="mapbox">
+      <div class="lab">WHERE IT HAPPENED &mdash; THE 11 LEAD STORIES, PINNED</div>
+      <svg width="600" height="130" viewBox="0 0 600 130">
+        <g stroke="#0e2340" stroke-width="3.2" stroke-linecap="round" fill="none" opacity="0.85">
+          <path d="M195 2.5h0 M205 2.5h0 M215 2.5h0 M225 2.5h0 M235 2.5h0 M245 2.5h0 M415 2.5h0 M425 2.5h0 M435 2.5h0 M445 2.5h0 M455 2.5h0 M465 2.5h0 M475 2.5h0 M485 2.5h0"/>
+          <path d="M25 7.5h0 M35 7.5h0 M45 7.5h0 M55 7.5h0 M65 7.5h0 M75 7.5h0 M85 7.5h0 M95 7.5h0 M105 7.5h0 M115 7.5h0 M125 7.5h0 M145 7.5h0 M195 7.5h0 M205 7.5h0 M215 7.5h0 M225 7.5h0 M315 7.5h0 M325 7.5h0 M335 7.5h0 M345 7.5h0 M355 7.5h0 M365 7.5h0 M375 7.5h0 M385 7.5h0 M395 7.5h0 M405 7.5h0 M415 7.5h0 M425 7.5h0 M435 7.5h0 M445 7.5h0 M455 7.5h0 M465 7.5h0 M475 7.5h0 M485 7.5h0 M495 7.5h0 M505 7.5h0 M515 7.5h0 M525 7.5h0 M535 7.5h0 M545 7.5h0 M555 7.5h0"/>
+          <path d="M15 12.5h0 M25 12.5h0 M35 12.5h0 M45 12.5h0 M55 12.5h0 M65 12.5h0 M75 12.5h0 M85 12.5h0 M95 12.5h0 M105 12.5h0 M115 12.5h0 M125 12.5h0 M135 12.5h0 M145 12.5h0 M155 12.5h0 M195 12.5h0 M205 12.5h0 M305 12.5h0 M315 12.5h0 M325 12.5h0 M335 12.5h0 M345 12.5h0 M355 12.5h0 M365 12.5h0 M375 12.5h0 M385 12.5h0 M395 12.5h0 M405 12.5h0 M415 12.5h0 M425 12.5h0 M435 12.5h0 M445 12.5h0 M455 12.5h0 M465 12.5h0 M475 12.5h0 M485 12.5h0 M495 12.5h0 M505 12.5h0 M515 12.5h0 M525 12.5h0 M535 12.5h0 M545 12.5h0 M555 12.5h0 M565 12.5h0 M575 12.5h0"/>
+          <path d="M65 17.5h0 M75 17.5h0 M85 17.5h0 M95 17.5h0 M105 17.5h0 M115 17.5h0 M125 17.5h0 M135 17.5h0 M145 17.5h0 M155 17.5h0 M165 17.5h0 M175 17.5h0 M305 17.5h0 M315 17.5h0 M325 17.5h0 M335 17.5h0 M345 17.5h0 M355 17.5h0 M365 17.5h0 M375 17.5h0 M385 17.5h0 M395 17.5h0 M405 17.5h0 M415 17.5h0 M425 17.5h0 M435 17.5h0 M445 17.5h0 M455 17.5h0 M465 17.5h0 M475 17.5h0 M485 17.5h0 M495 17.5h0 M505 17.5h0 M515 17.5h0 M525 17.5h0 M545 17.5h0 M555 17.5h0"/>
+          <path d="M75 22.5h0 M85 22.5h0 M95 22.5h0 M105 22.5h0 M115 22.5h0 M125 22.5h0 M135 22.5h0 M145 22.5h0 M155 22.5h0 M165 22.5h0 M175 22.5h0 M185 22.5h0 M295 22.5h0 M305 22.5h0 M315 22.5h0 M325 22.5h0 M335 22.5h0 M345 22.5h0 M355 22.5h0 M365 22.5h0 M375 22.5h0 M385 22.5h0 M395 22.5h0 M405 22.5h0 M415 22.5h0 M425 22.5h0 M435 22.5h0 M445 22.5h0 M455 22.5h0 M465 22.5h0 M475 22.5h0 M485 22.5h0 M495 22.5h0 M505 22.5h0 M515 22.5h0"/>
+          <path d="M85 27.5h0 M95 27.5h0 M105 27.5h0 M115 27.5h0 M125 27.5h0 M135 27.5h0 M145 27.5h0 M155 27.5h0 M165 27.5h0 M175 27.5h0 M285 27.5h0 M295 27.5h0 M305 27.5h0 M315 27.5h0 M325 27.5h0 M335 27.5h0 M345 27.5h0 M355 27.5h0 M365 27.5h0 M375 27.5h0 M385 27.5h0 M395 27.5h0 M405 27.5h0 M415 27.5h0 M425 27.5h0 M435 27.5h0 M445 27.5h0 M455 27.5h0 M465 27.5h0 M475 27.5h0 M485 27.5h0 M495 27.5h0 M505 27.5h0"/>
+          <path d="M85 32.5h0 M95 32.5h0 M105 32.5h0 M115 32.5h0 M125 32.5h0 M135 32.5h0 M145 32.5h0 M155 32.5h0 M165 32.5h0 M275 32.5h0 M285 32.5h0 M315 32.5h0 M325 32.5h0 M335 32.5h0 M345 32.5h0 M355 32.5h0 M365 32.5h0 M375 32.5h0 M385 32.5h0 M395 32.5h0 M405 32.5h0 M415 32.5h0 M425 32.5h0 M435 32.5h0 M445 32.5h0 M455 32.5h0 M465 32.5h0 M475 32.5h0 M485 32.5h0 M495 32.5h0"/>
+          <path d="M85 37.5h0 M95 37.5h0 M105 37.5h0 M115 37.5h0 M125 37.5h0 M135 37.5h0 M145 37.5h0 M155 37.5h0 M275 37.5h0 M335 37.5h0 M345 37.5h0 M355 37.5h0 M365 37.5h0 M375 37.5h0 M385 37.5h0 M395 37.5h0 M405 37.5h0 M415 37.5h0 M425 37.5h0 M435 37.5h0 M445 37.5h0 M455 37.5h0 M465 37.5h0 M475 37.5h0 M485 37.5h0"/>
+          <path d="M95 42.5h0 M105 42.5h0 M115 42.5h0 M125 42.5h0 M135 42.5h0 M145 42.5h0 M275 42.5h0 M285 42.5h0 M295 42.5h0 M305 42.5h0 M355 42.5h0 M365 42.5h0 M375 42.5h0 M385 42.5h0 M395 42.5h0 M405 42.5h0 M415 42.5h0 M425 42.5h0 M435 42.5h0 M445 42.5h0 M455 42.5h0 M465 42.5h0 M475 42.5h0"/>
+          <path d="M105 47.5h0 M115 47.5h0 M125 47.5h0 M135 47.5h0 M145 47.5h0 M265 47.5h0 M275 47.5h0 M285 47.5h0 M295 47.5h0 M305 47.5h0 M315 47.5h0 M325 47.5h0 M335 47.5h0 M375 47.5h0 M385 47.5h0 M395 47.5h0 M405 47.5h0 M415 47.5h0 M425 47.5h0 M435 47.5h0 M445 47.5h0 M455 47.5h0 M465 47.5h0 M475 47.5h0 M485 47.5h0"/>
+          <path d="M105 52.5h0 M115 52.5h0 M125 52.5h0 M135 52.5h0 M265 52.5h0 M275 52.5h0 M285 52.5h0 M295 52.5h0 M305 52.5h0 M315 52.5h0 M325 52.5h0 M335 52.5h0 M405 52.5h0 M415 52.5h0 M425 52.5h0 M435 52.5h0 M445 52.5h0 M455 52.5h0 M465 52.5h0"/>
+          <path d="M265 57.5h0 M275 57.5h0 M285 57.5h0 M295 57.5h0 M305 57.5h0 M315 57.5h0 M325 57.5h0 M335 57.5h0 M345 57.5h0 M405 57.5h0 M415 57.5h0 M445 57.5h0 M455 57.5h0"/>
+          <path d="M265 62.5h0 M275 62.5h0 M285 62.5h0 M295 62.5h0 M305 62.5h0 M315 62.5h0 M325 62.5h0 M335 62.5h0 M345 62.5h0 M445 62.5h0 M455 62.5h0"/>
+          <path d="M155 67.5h0 M165 67.5h0 M175 67.5h0 M265 67.5h0 M275 67.5h0 M285 67.5h0 M295 67.5h0 M305 67.5h0 M315 67.5h0 M325 67.5h0 M335 67.5h0 M345 67.5h0 M355 67.5h0"/>
+          <path d="M155 72.5h0 M165 72.5h0 M175 72.5h0 M185 72.5h0 M195 72.5h0 M305 72.5h0 M315 72.5h0 M325 72.5h0 M335 72.5h0 M345 72.5h0 M355 72.5h0"/>
+          <path d="M155 77.5h0 M165 77.5h0 M175 77.5h0 M185 77.5h0 M195 77.5h0 M205 77.5h0 M305 77.5h0 M315 77.5h0 M325 77.5h0 M335 77.5h0 M345 77.5h0 M465 77.5h0 M475 77.5h0 M485 77.5h0 M495 77.5h0 M505 77.5h0"/>
+          <path d="M155 82.5h0 M165 82.5h0 M175 82.5h0 M185 82.5h0 M195 82.5h0 M205 82.5h0 M215 82.5h0 M305 82.5h0 M315 82.5h0 M325 82.5h0 M335 82.5h0 M345 82.5h0 M475 82.5h0 M485 82.5h0 M515 82.5h0"/>
+          <path d="M165 87.5h0 M175 87.5h0 M185 87.5h0 M195 87.5h0 M205 87.5h0 M215 87.5h0 M305 87.5h0 M315 87.5h0 M325 87.5h0 M335 87.5h0 M345 87.5h0 M505 87.5h0"/>
+          <path d="M165 92.5h0 M175 92.5h0 M185 92.5h0 M195 92.5h0 M205 92.5h0 M215 92.5h0 M305 92.5h0 M315 92.5h0 M325 92.5h0 M335 92.5h0 M495 92.5h0 M505 92.5h0 M515 92.5h0 M525 92.5h0"/>
+          <path d="M175 97.5h0 M185 97.5h0 M195 97.5h0 M205 97.5h0 M215 97.5h0 M315 97.5h0 M325 97.5h0 M335 97.5h0 M475 97.5h0 M485 97.5h0 M495 97.5h0 M505 97.5h0 M515 97.5h0 M525 97.5h0"/>
+          <path d="M175 102.5h0 M185 102.5h0 M195 102.5h0 M315 102.5h0 M325 102.5h0 M335 102.5h0 M475 102.5h0 M485 102.5h0 M495 102.5h0 M505 102.5h0 M515 102.5h0 M525 102.5h0 M535 102.5h0"/>
+          <path d="M175 107.5h0 M185 107.5h0 M315 107.5h0 M325 107.5h0 M475 107.5h0 M485 107.5h0 M505 107.5h0 M515 107.5h0 M525 107.5h0 M535 107.5h0"/>
+          <path d="M165 112.5h0 M175 112.5h0 M525 112.5h0"/>
+          <path d="M165 117.5h0 M175 117.5h0"/>
+          <path d="M165 122.5h0 M175 122.5h0"/>
+          <path d="M283 22.5h0 M253 10h0 M515 37.5h0 M505 42.5h0 M573 112.5h0 M573 117.5h0"/>
+        </g>
+        <g font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle">
+          <g><circle cx="473" cy="52" r="6.5" fill="#c8102e" stroke="#fff" stroke-width="1.5"/><text x="473" y="55" fill="#fff">1</text></g>
+          <g><circle cx="363" cy="46" r="6.5" fill="#c8102e" stroke="#fff" stroke-width="1.5"/><text x="363" y="49" fill="#fff">2</text></g>
+          <g><circle cx="33" cy="11" r="6.5" fill="#c8102e" stroke="#fff" stroke-width="1.5"/><text x="33" y="14" fill="#fff">3</text></g>
+          <g><circle cx="160" cy="34" r="6.5" fill="#c8102e" stroke="#fff" stroke-width="1.5"/><text x="160" y="37" fill="#fff">4</text></g>
+          <g><circle cx="80" cy="38" r="6.5" fill="#c8102e" stroke="#fff" stroke-width="1.5"/><text x="80" y="41" fill="#fff">5</text></g>
+          <g><circle cx="143" cy="41" r="6.5" fill="#c8102e" stroke="#fff" stroke-width="1.5"/><text x="143" y="44" fill="#fff">6</text></g>
+          <g><circle cx="425" cy="55" r="6.5" fill="#c8102e" stroke="#fff" stroke-width="1.5"/><text x="425" y="58" fill="#fff">7</text></g>
+          <g><circle cx="341" cy="44" r="6.5" fill="#c8102e" stroke="#fff" stroke-width="1.5"/><text x="341" y="47" fill="#fff">8</text></g>
+          <g><circle cx="485" cy="60" r="6.5" fill="#c8102e" stroke="#fff" stroke-width="1.5"/><text x="485" y="63" fill="#fff">9</text></g>
+          <g><circle cx="346" cy="60" r="6.5" fill="#c8102e" stroke="#fff" stroke-width="1.5"/><text x="346" y="63" fill="#fff">10</text></g>
+          <g><circle cx="334" cy="73" r="6.5" fill="#c8102e" stroke="#fff" stroke-width="1.5"/><text x="334" y="76" fill="#fff">11</text></g>
+        </g>
+      </svg>
     </div>
-
-    <div class="tile">
-      <div class="art">
-        <svg width="120" height="110" viewBox="0 0 120 110">
-          <g fill="#0e2340">
-            <path d="M60 12 C40 12 30 30 30 44 L90 44 C90 30 80 12 60 12Z"/>
-            <rect x="56" y="2" width="8" height="10"/>
-            <rect x="26" y="48" width="68" height="6"/>
-            <rect x="32" y="58" width="6" height="18"/><rect x="46" y="58" width="6" height="18"/>
-            <rect x="68" y="58" width="6" height="18"/><rect x="82" y="58" width="6" height="18"/>
-            <rect x="22" y="78" width="76" height="8"/>
-            <rect x="16" y="88" width="88" height="8"/>
-          </g>
-        </svg>
-      </div>
-      <div class="body">
-        <div class="kick">UNITED STATES &middot; SENATE</div>
-        <div class="big">56&ndash;44</div>
-        <h3>DEMOCRATS TAKE THE SENATE</h3>
-        <p>Mary Peltola wins Alaska, the last race to be called, handing Democrats the majority.</p>
-      </div>
-    </div>
-
-    <div class="tile">
-      <div class="art">
-        <svg width="120" height="110" viewBox="0 0 120 110">
-          <g stroke="#c0392b" stroke-width="5" stroke-linecap="round">
-            <line x1="60" y1="8" x2="60" y2="30"/><line x1="60" y1="80" x2="60" y2="102"/>
-            <line x1="8" y1="55" x2="30" y2="55"/><line x1="90" y1="55" x2="112" y2="55"/>
-            <line x1="23" y1="18" x2="38" y2="33"/><line x1="82" y1="77" x2="97" y2="92"/>
-            <line x1="97" y1="18" x2="82" y2="33"/><line x1="38" y1="77" x2="23" y2="92"/>
-          </g>
-          <circle cx="60" cy="55" r="26" fill="#c0392b"/>
-          <circle cx="50" cy="47" r="4" fill="#e74c3c"/><circle cx="70" cy="50" r="4" fill="#e74c3c"/>
-          <circle cx="58" cy="64" r="4" fill="#e74c3c"/><circle cx="68" cy="66" r="3" fill="#e74c3c"/>
-        </svg>
-      </div>
-      <div class="body">
-        <div class="kick">HEALTH &middot; UNITED STATES</div>
-        <h3>US LOSES MEASLES-FREE STATUS</h3>
-        <p>After a year of continuous spread, health officials end the country&rsquo;s long-held measles-elimination status.</p>
-      </div>
-    </div>
-
-    <div class="tile">
-      <div class="art">
-        <svg width="120" height="110" viewBox="0 0 120 110">
-          <g>
-            <rect x="30" y="25" width="60" height="60" rx="6" fill="#76b900"/>
-            <rect x="42" y="37" width="36" height="36" rx="3" fill="#a4d14a"/>
-            <g stroke="#76b900" stroke-width="5" stroke-linecap="round">
-              <line x1="40" y1="25" x2="40" y2="12"/><line x1="60" y1="25" x2="60" y2="12"/><line x1="80" y1="25" x2="80" y2="12"/>
-              <line x1="40" y1="85" x2="40" y2="98"/><line x1="60" y1="85" x2="60" y2="98"/><line x1="80" y1="85" x2="80" y2="98"/>
-              <line x1="30" y1="40" x2="17" y2="40"/><line x1="30" y1="55" x2="17" y2="55"/><line x1="30" y1="70" x2="17" y2="70"/>
-              <line x1="90" y1="40" x2="103" y2="40"/><line x1="90" y1="55" x2="103" y2="55"/><line x1="90" y1="70" x2="103" y2="70"/>
-            </g>
-          </g>
-        </svg>
-      </div>
-      <div class="body">
-        <div class="kick">TECH &middot; EARNINGS</div>
-        <div class="big">$115.8B <span class="up">+103%</span></div>
-        <h3>NVIDIA BEATS FORECASTS</h3>
-        <p>Quarterly revenue more than doubles in its first results since Jensen Huang&rsquo;s exit.</p>
-      </div>
+    <div class="stats">
+      <div class="stat"><div class="n">$83</div><div class="l">Anthropic IPO price &mdash; the biggest share sale ever</div></div>
+      <div class="stat"><div class="n">50,000</div><div class="l">people evacuated in Odisha as Cyclone Akvan nears</div></div>
+      <div class="stat"><div class="n">$190.4m</div><div class="l">record price for a Van Gogh at auction</div></div>
+      <div class="stat"><div class="n">19</div><div class="l">killed as a Russian An-12 crashes in Siberia</div></div>
     </div>
   </div>
 
+  <!-- leads 2-11 -->
+  <div class="leads">
+    <div class="tile"><div class="num">2</div><svg class="art" viewBox="0 0 64 64"><g fill="#3a3a3a"><rect x="26" y="28" width="12" height="8" rx="2"/><rect x="12" y="30" width="14" height="3"/><rect x="38" y="30" width="14" height="3"/><rect x="30" y="14" width="4" height="12"/><rect x="30" y="38" width="4" height="12"/></g><g fill="#666"><circle cx="12" cy="31" r="4"/><circle cx="52" cy="31" r="4"/><circle cx="32" cy="14" r="4"/><circle cx="32" cy="50" r="4"/></g><g stroke="#999" stroke-width="1.5"><line x1="4" y1="31" x2="20" y2="31"/><line x1="44" y1="31" x2="60" y2="31"/><line x1="32" y1="6" x2="32" y2="22"/><line x1="32" y1="42" x2="32" y2="58"/></g></svg><div class="tx"><h3><span class="k">GULF &middot;</span> Iran says its drones hit US bases in Kuwait and Bahrain</h3><p>Tehran claims strikes on Ali Al Salem and a Bahrain base after US jets hit Qeshm Island; both say the drones were intercepted.</p></div></div>
+    <div class="tile"><div class="num">3</div><svg class="art" viewBox="0 0 64 64"><g fill="#0e2340"><path d="M32 6 C20 14 16 22 16 30 L48 30 C48 22 44 14 32 6 Z"/><rect x="30" y="2" width="4" height="6"/><rect x="12" y="30" width="40" height="4"/><rect x="16" y="34" width="4" height="14"/><rect x="24" y="34" width="4" height="14"/><rect x="36" y="34" width="4" height="14"/><rect x="44" y="34" width="4" height="14"/><rect x="10" y="48" width="44" height="5"/><rect x="8" y="53" width="48" height="4"/></g></svg><div class="tx"><h3><span class="k">US POLITICS &middot;</span> Peltola wins Alaska; Democrats take Senate 56&ndash;44</h3><p>Mary Peltola&rsquo;s win in Alaska seals a 56&ndash;44 Democratic Senate majority, AP projects &mdash; the last race to be called.</p></div></div>
+    <div class="tile"><div class="num">4</div><svg class="art" viewBox="0 0 64 64"><g fill="none" stroke="#1a7a3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 52 L24 36 L34 42 L54 14"/><path d="M44 14 L54 14 L54 24"/></g><text x="8" y="18" font-size="20" font-weight="bold" fill="#1a7a3a" font-family="Arial, sans-serif">$</text><g stroke="#ccc" stroke-width="1"><line x1="8" y1="56" x2="56" y2="56"/><line x1="8" y1="56" x2="8" y2="10"/></g></svg><div class="tx"><h3><span class="k">MARKETS &middot;</span> Anthropic prices IPO at $83 &mdash; the biggest ever</h3><p>Priced above the $70&ndash;78 range, the $81bn offering values the AI firm at about $1.5tn &mdash; the biggest IPO ever. (Reuters)</p></div></div>
+    <div class="tile"><div class="num">5</div><svg class="art" viewBox="0 0 64 64"><g fill="#222"><rect x="16" y="16" width="32" height="32" rx="3"/><rect x="24" y="24" width="16" height="16" fill="#f7f3ea"/></g><g stroke="#222" stroke-width="3" stroke-linecap="round"><line x1="22" y1="16" x2="22" y2="8"/><line x1="32" y1="16" x2="32" y2="8"/><line x1="42" y1="16" x2="42" y2="8"/><line x1="22" y1="48" x2="22" y2="56"/><line x1="32" y1="48" x2="32" y2="56"/><line x1="42" y1="48" x2="42" y2="56"/><line x1="16" y1="22" x2="8" y2="22"/><line x1="16" y1="32" x2="8" y2="32"/><line x1="16" y1="42" x2="8" y2="42"/><line x1="48" y1="22" x2="56" y2="22"/><line x1="48" y1="32" x2="56" y2="32"/><line x1="48" y1="42" x2="56" y2="42"/></g></svg><div class="tx"><h3><span class="k">TECH &middot;</span> Nvidia revenue $115.8bn, up 103% on AI demand</h3><p>First results since Jensen Huang&rsquo;s exit; Q4 sales guided at $130bn. Shares rally after the beat. (AFP/Reuters)</p></div></div>
+    <div class="tile"><div class="num">6</div><svg class="art" viewBox="0 0 64 64"><g fill="#b3202a"><circle cx="32" cy="32" r="13"/></g><g stroke="#b3202a" stroke-width="3" stroke-linecap="round"><line x1="32" y1="19" x2="32" y2="8"/><line x1="32" y1="45" x2="32" y2="56"/><line x1="19" y1="32" x2="8" y2="32"/><line x1="45" y1="32" x2="56" y2="32"/><line x1="23" y1="23" x2="15" y2="15"/><line x1="41" y1="23" x2="49" y2="15"/><line x1="23" y1="41" x2="15" y2="49"/><line x1="41" y1="41" x2="49" y2="49"/></g><g fill="#fff"><circle cx="27" cy="29" r="2.5"/><circle cx="36" cy="35" r="2.5"/><circle cx="37" cy="27" r="2"/></g></svg><div class="tx"><h3><span class="k">HEALTH &middot;</span> US loses measles-elimination status</h3><p>PAHO says the US has lost its measles-elimination status after a year of continuous outbreaks. (PAHO)</p></div></div>
+    <div class="tile"><div class="num">7</div><svg class="art" viewBox="0 0 64 64"><g fill="none" stroke="#1a5a9a" stroke-width="4" stroke-linecap="round"><path d="M32 32 m0 -4 a4 4 0 1 1 4 4"/><path d="M32 32 m0 -10 a10 10 0 1 1 -10 10"/><path d="M32 32 m0 -17 a17 17 0 1 1 17 17"/><path d="M32 32 m0 -24 a24 24 0 1 1 -24 24"/></g></svg><div class="tx"><h3><span class="k">WEATHER &middot;</span> Cyclone Akvan bears down on India&rsquo;s east coast</h3><p>Due to make landfall 20 Nov; ~50,000 evacuated in Odisha, six Andhra districts on red alert, gusts to 145 km/h. (IMD)</p></div></div>
+    <div class="tile"><div class="num">8</div><svg class="art" viewBox="0 0 64 64"><g fill="#5a5a3a"><rect x="10" y="36" width="36" height="12" rx="3"/><rect x="22" y="26" width="16" height="12" rx="2"/><rect x="36" y="29" width="18" height="4"/><circle cx="18" cy="50" r="4"/><circle cx="28" cy="50" r="4"/><circle cx="38" cy="50" r="4"/></g><g fill="#7a7a4a"><rect x="12" y="40" width="32" height="3"/></g></svg><div class="tx"><h3><span class="k">GAZA &middot;</span> Israel opens &lsquo;concentrated operation&rsquo; in central Gaza</h3><p>IDF says troops are operating in three areas; the Board of Peace gives a bleak Gaza rebuild update to the UN Security Council. (IDF/AP)</p></div></div>
+    <div class="tile"><div class="num">9</div><svg class="art" viewBox="0 0 64 64"><g opacity="0.9"><circle cx="24" cy="24" r="14" fill="#1a5a9a"/><circle cx="40" cy="24" r="14" fill="#b3202a"/><circle cx="24" cy="40" r="14" fill="#1a7a3a"/><circle cx="40" cy="40" r="14" fill="#e8a13c"/></g><g fill="#fff" font-size="11" font-weight="bold" font-family="Arial, sans-serif" text-anchor="middle"><text x="24" y="28">US</text><text x="40" y="28">JP</text><text x="24" y="44">AU</text><text x="40" y="44">IN</text></g></svg><div class="tx"><h3><span class="k">ASIA-PACIFIC &middot;</span> Quad leaders meet in Manila, first time in two years</h3><p>Trump announces a trade deal with the Philippines; Modi hails &lsquo;productive&rsquo; talks; Lee Jae Myung courts Beijing at APEC. (AP)</p></div></div>
+    <div class="tile"><div class="num">10</div><svg class="art" viewBox="0 0 64 64"><g fill="none" stroke="#b3202a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20 L30 32 L8 44"/><path d="M56 20 L34 32 L56 44"/></g><g fill="#b3202a"><path d="M30 32 l6 -3 v6 z"/><path d="M34 32 l-6 -3 v6 z"/></g><g stroke="#888" stroke-width="1.5"><line x1="32" y1="6" x2="32" y2="58" stroke-dasharray="3 3"/></g></svg><div class="tx"><h3><span class="k">AFRICA &middot;</span> Ethiopia and Eritrea mass troops on their border</h3><p>Forces build up near Badme and clashes are reported; war fears rise as both sides deny mobilisation claims. (Reuters)</p></div></div>
+    <div class="tile"><div class="num">11</div><svg class="art" viewBox="0 0 64 64"><g fill="none" stroke="#0e7a6a" stroke-width="3" stroke-linecap="round"><path d="M24 6 v18 c0 4 -4 6 -4 10 v16 a8 8 0 0 0 16 0 V34 c0 -4 -4 -6 -4 -10 V6"/></g><g fill="#0e7a6a"><rect x="22" y="36" width="20" height="16" rx="3"/></g><g fill="#fff"><circle cx="28" cy="42" r="2"/><circle cx="36" cy="47" r="2.5"/><circle cx="33" cy="40" r="1.5"/></g><g stroke="#0e7a6a" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="46" y2="6"/></g></svg><div class="tx"><h3><span class="k">HEALTH &middot;</span> Ebola vaccine trials to start in DR Congo</h3><p>WHO-backed trials of a strain-specific vaccine begin next week in Bunia; 5,568 of 11,376 cases have died &mdash; the worst ever. (WHO)</p></div></div>
+  </div>
+
+  <!-- also on -->
   <div class="also">
-    <div class="label">ALSO ON 18 NOVEMBER</div>
-    <div class="items">
-      <div class="item"><b>GAZA &mdash;</b> Israel opens a new &ldquo;concentrated operation&rdquo; in three areas of central Gaza.</div>
-      <div class="item"><b>CYCLONE AKVAN &mdash;</b> Severe storm nears India&rsquo;s Odisha coast; thousands move to shelters.</div>
+    <h3>ALSO ON 18 NOVEMBER &mdash; 30 MORE STORIES</h3>
+    <div class="grid">
+      <div><b>12.</b> Haiti &mdash; Thousands march for Bukele; El Salvador pact.</div>
+      <div><b>13.</b> Russia &mdash; An-12 plane crashes in Siberia; 19 killed.</div>
+      <div><b>14.</b> Ukraine &mdash; Crimean Bridge attacked again, Russia says.</div>
+      <div><b>15.</b> Art &mdash; Van Gogh sells for record $190.4m.</div>
+      <div><b>16.</b> Tennis &mdash; Alcaraz beats Medvedev 6&ndash;2, 6&ndash;4 in Turin.</div>
+      <div><b>17.</b> Football &mdash; Spain stay No. 1; Morocco climb to 5th.</div>
+      <div><b>18.</b> Markets &mdash; Nasdaq +0.4%, Dow &minus;1.1%; gold slides.</div>
+      <div><b>19.</b> Fed &mdash; Minutes due; Waller signals a December rate hike.</div>
+      <div><b>20.</b> UK &mdash; Inflation at one-year high, 3.6%; bills +&pound;443.</div>
+      <div><b>21.</b> Israel &mdash; New Knesset speaker backed by Netanyahu foes.</div>
+      <div><b>22.</b> Royals &mdash; William and Kate meet Modi; India tour ends.</div>
+      <div><b>23.</b> US House &mdash; Democrats nominate Jeffries for Speaker.</div>
+      <div><b>24.</b> Royals &mdash; Harry would rejoin the army; warns on Russia.</div>
+      <div><b>25.</b> UK &mdash; &lsquo;Feudal&rsquo; leasehold system to be scrapped.</div>
+      <div><b>26.</b> Games &mdash; GTA VI reviews call it &lsquo;a masterpiece&rsquo;.</div>
+      <div><b>27.</b> Music &mdash; Glastonbury 2027: Styles, Cher, Fender, Eilish.</div>
+      <div><b>28.</b> Space &mdash; NASA finds clues to ancient ice beyond Neptune.</div>
+      <div><b>29.</b> Space &mdash; Giant star seen swallowing its companion.</div>
+      <div><b>30.</b> Space &mdash; 62-min radio pulses may come from a dead star.</div>
+      <div><b>31.</b> Brazil &mdash; Uncontacted Awa group emerges from Amazon.</div>
+      <div><b>32.</b> Brazil &mdash; Senate approves R$56.1bn fiscal package, 45&ndash;31.</div>
+      <div><b>33.</b> Argentina &mdash; Seeks tribunal block on Falklands drilling.</div>
+      <div><b>34.</b> India&ndash;US &mdash; Trade talks nearly done; signing waits.</div>
+      <div><b>35.</b> Fiji &mdash; National disaster declared over El Ni&ntilde;o drought.</div>
+      <div><b>36.</b> Quakes &mdash; M4.1 Uttarakhand; M5.8 off Papua New Guinea.</div>
+      <div><b>37.</b> Kashmir &mdash; Top LeT militant Bhat killed in Kulgam clash.</div>
+      <div><b>38.</b> Miss Universe &mdash; 10 countries out over visa rows.</div>
+      <div><b>39.</b> Nigeria &mdash; Eight held in cocaine gang using Sahara route.</div>
+      <div><b>40.</b> Sudan &mdash; Rights groups seek al-Bashir arrest for ICC.</div>
+      <div><b>41.</b> Tech &mdash; Outages reach NSA; Rubio: &lsquo;zero&rsquo; malign link.</div>
     </div>
   </div>
 
-  <div class="foot">18 NOVEMBER 2026 &middot; EVENTS AS REPORTED THAT DAY &middot; ONE IMAGE, ONE DAY</div>
+  <!-- date check -->
+  <div class="datecheck">DATE CHECK &mdash; NOT 18 NOVEMBER: trilateral summit Thu 19 Nov &middot; Akvan landfall Fri 20 Nov &middot; Miss Universe finale Mon 24 Nov</div>
+
+  <!-- footer -->
+  <div class="foot">SOURCES: AP &middot; REUTERS &middot; AFP &middot; BBC &middot; PAHO &middot; WHO &middot; NASA &middot; IMD &middot; THE HINDU &mdash; All 41 stories verified against reporting published 18 November 2026. Drawn by hand in HTML/CSS/SVG; no photographs.</div>
 </div>
 </body>
 </html>
