@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>18 November 2026 — World news in one image</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #888; font-family: "Noto Sans", "DejaVu Sans", sans-serif; }
+  .page { width: 1024px; height: 1024px; background: #f7f3ea; margin: 0 auto; overflow: hidden; display: flex; flex-direction: column; }
+  /* ---------- header ---------- */
+  .header { background: #0e2340; color: #fff; padding: 18px 28px 16px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .header .kicker { font-size: 17px; letter-spacing: 5px; color: #e8b64c; font-weight: 700; }
+  .header h1 { font-size: 60px; line-height: 1.02; font-weight: 800; letter-spacing: 0.5px; }
+  .header h1 .yr { color: #e8b64c; }
+  .header .right { text-align: right; padding-bottom: 6px; }
+  .header .right .tag { font-size: 19px; font-weight: 700; letter-spacing: 2px; }
+  .header .right .sub { font-size: 14px; color: #b9c6d8; letter-spacing: 1px; margin-top: 4px; }
+  /* ---------- hero ---------- */
+  .hero { display: flex; gap: 24px; padding: 16px 28px 12px; border-bottom: 3px solid #0e2340; }
+  .flags { display: flex; gap: 14px; align-items: center; flex-shrink: 0; }
+  .flag { width: 132px; height: 88px; position: relative; box-shadow: 0 2px 6px rgba(0,0,0,.35); }
+  .flag.cn { background: #de2910; }
+  .flag.cn .star { color: #ffde00; position: absolute; font-size: 30px; line-height: 1; left: 10px; top: 8px; }
+  .flag.cn .s2 { font-size: 12px; left: 46px; top: 8px; }
+  .flag.cn .s3 { font-size: 12px; left: 56px; top: 22px; }
+  .flag.cn .s4 { font-size: 12px; left: 52px; top: 38px; }
+  .flag.cn .s5 { font-size: 12px; left: 38px; top: 46px; }
+  .flag.ru { background: linear-gradient(#fff 0 33.3%, #0039a6 33.3% 66.6%, #d52b1e 66.6% 100%); }
+  .flag.us { background: repeating-linear-gradient(#b22234 0 6.77px, #fff 6.77px 13.54px); }
+  .flag.us .canton { position: absolute; left: 0; top: 0; width: 53px; height: 47px; background: #3c3b6e; color: #fff; font-size: 8px; line-height: 9px; letter-spacing: 2px; padding: 4px 0 0 4px; }
+  .flag .cap { position: absolute; bottom: -24px; left: 0; right: 0; text-align: center; font-size: 14px; font-weight: 700; letter-spacing: 2px; color: #333; }
+  .hero .text { flex: 1; }
+  .hero .kick { font-size: 16px; font-weight: 800; letter-spacing: 3px; color: #b3271e; }
+  .hero h2 { font-size: 45px; line-height: 1.08; font-weight: 800; color: #0e2340; margin: 6px 0 8px; }
+  .hero p { font-size: 21px; line-height: 1.35; color: #2c2c2c; }
+  .hero p b { color: #0e2340; }
+  /* ---------- grid ---------- */
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 14px 28px 2px; }
+  .tile { background: #fff; border: 2px solid #0e2340; border-radius: 10px; padding: 12px 16px 10px; display: flex; gap: 14px; height: 220px; }
+  .tile .art { width: 128px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .tile .body { flex: 1; }
+  .tile .kick { font-size: 13px; font-weight: 800; letter-spacing: 2.5px; color: #b3271e; }
+  .tile h3 { font-size: 27px; line-height: 1.12; font-weight: 800; color: #0e2340; margin: 5px 0 6px; }
+  .tile p { font-size: 17px; line-height: 1.32; color: #333; }
+  .tile .big { font-size: 40px; font-weight: 800; color: #0e2340; line-height: 1; margin: 4px 0 2px; }
+  .tile .big .up { color: #1e7d32; }
+  /* ---------- also strip ---------- */
+  .also { margin: 12px 28px 0; background: #0e2340; color: #fff; border-radius: 10px; padding: 13px 20px 12px; flex: none; }
+  .also .label { font-size: 14px; font-weight: 800; letter-spacing: 3px; color: #e8b64c; margin-bottom: 10px; }
+  .also .items { display: flex; gap: 28px; }
+  .also .item { flex: 1; font-size: 19px; line-height: 1.35; }
+  .also .item b { color: #e8b64c; }
+  .foot { text-align: center; font-size: 13px; color: #8a8578; padding: 0; letter-spacing: 1px; height: 30px; line-height: 30px; flex: none; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div>
+      <div class="kicker">WEDNESDAY &middot; THE WORLD IN ONE IMAGE</div>
+      <h1>18 NOVEMBER <span class="yr">2026</span></h1>
+    </div>
+    <div class="right">
+      <div class="tag">WORLD NEWS</div>
+      <div class="sub">One day &middot; Seven stories</div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="flags">
+      <div class="flag cn"><span class="star">&#9733;</span><span class="star s2">&#9733;</span><span class="star s3">&#9733;</span><span class="star s4">&#9733;</span><span class="star s5">&#9733;</span><div class="cap">CHINA</div></div>
+      <div class="flag ru"><div class="cap">RUSSIA</div></div>
+      <div class="flag us"><div class="canton">&#9733;&#9733;&#9733;&#9733;<br>&#9733;&#9733;&#9733;&#9733;<br>&#9733;&#9733;&#9733;&#9733;</div><div class="cap">UNITED STATES</div></div>
+    </div>
+    <div class="text">
+      <div class="kick">APEC &middot; SHENZHEN, CHINA</div>
+      <h2>XI AND PUTIN MEET AS TRUMP LANDS</h2>
+      <p>China&rsquo;s Xi Jinping and Russia&rsquo;s Vladimir Putin hold talks in Shenzhen &mdash; a day before the <b>first-ever three-way summit</b> with US President Donald Trump.</p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="tile">
+      <div class="art">
+        <svg width="120" height="110" viewBox="0 0 120 110">
+          <polygon points="100,2 104,14 116,14 107,22 110,34 100,27 90,34 93,22 84,14 96,14" fill="#f39c12"/>
+          <g fill="#1f2a37">
+            <ellipse cx="52" cy="62" rx="26" ry="12"/>
+            <rect x="20" y="56" width="18" height="4" transform="rotate(-18 20 58)"/>
+            <rect x="82" y="52" width="18" height="4" transform="rotate(18 82 54)"/>
+            <circle cx="16" cy="50" r="7" fill="none" stroke="#1f2a37" stroke-width="3"/>
+            <circle cx="100" cy="50" r="7" fill="none" stroke="#1f2a37" stroke-width="3"/>
+            <rect x="46" y="72" width="12" height="14" rx="2"/>
+          </g>
+          <path d="M30 92 Q52 100 76 92" stroke="#b3271e" stroke-width="4" fill="none"/>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="kick">MIDDLE EAST &middot; GULF</div>
+        <h3>IRAN STRIKES US BASES</h3>
+        <p>Tehran says its drones hit US sites in <b>Kuwait and Bahrain</b> after the US struck Qeshm Island in the Strait of Hormuz.</p>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="art">
+        <svg width="120" height="110" viewBox="0 0 120 110">
+          <g fill="#0e2340">
+            <path d="M60 12 C40 12 30 30 30 44 L90 44 C90 30 80 12 60 12Z"/>
+            <rect x="56" y="2" width="8" height="10"/>
+            <rect x="26" y="48" width="68" height="6"/>
+            <rect x="32" y="58" width="6" height="18"/><rect x="46" y="58" width="6" height="18"/>
+            <rect x="68" y="58" width="6" height="18"/><rect x="82" y="58" width="6" height="18"/>
+            <rect x="22" y="78" width="76" height="8"/>
+            <rect x="16" y="88" width="88" height="8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="kick">UNITED STATES &middot; SENATE</div>
+        <div class="big">56&ndash;44</div>
+        <h3>DEMOCRATS TAKE THE SENATE</h3>
+        <p>Mary Peltola wins Alaska, the last race to be called, handing Democrats the majority.</p>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="art">
+        <svg width="120" height="110" viewBox="0 0 120 110">
+          <g stroke="#c0392b" stroke-width="5" stroke-linecap="round">
+            <line x1="60" y1="8" x2="60" y2="30"/><line x1="60" y1="80" x2="60" y2="102"/>
+            <line x1="8" y1="55" x2="30" y2="55"/><line x1="90" y1="55" x2="112" y2="55"/>
+            <line x1="23" y1="18" x2="38" y2="33"/><line x1="82" y1="77" x2="97" y2="92"/>
+            <line x1="97" y1="18" x2="82" y2="33"/><line x1="38" y1="77" x2="23" y2="92"/>
+          </g>
+          <circle cx="60" cy="55" r="26" fill="#c0392b"/>
+          <circle cx="50" cy="47" r="4" fill="#e74c3c"/><circle cx="70" cy="50" r="4" fill="#e74c3c"/>
+          <circle cx="58" cy="64" r="4" fill="#e74c3c"/><circle cx="68" cy="66" r="3" fill="#e74c3c"/>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="kick">HEALTH &middot; UNITED STATES</div>
+        <h3>US LOSES MEASLES-FREE STATUS</h3>
+        <p>After a year of continuous spread, health officials end the country&rsquo;s long-held measles-elimination status.</p>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="art">
+        <svg width="120" height="110" viewBox="0 0 120 110">
+          <g>
+            <rect x="30" y="25" width="60" height="60" rx="6" fill="#76b900"/>
+            <rect x="42" y="37" width="36" height="36" rx="3" fill="#a4d14a"/>
+            <g stroke="#76b900" stroke-width="5" stroke-linecap="round">
+              <line x1="40" y1="25" x2="40" y2="12"/><line x1="60" y1="25" x2="60" y2="12"/><line x1="80" y1="25" x2="80" y2="12"/>
+              <line x1="40" y1="85" x2="40" y2="98"/><line x1="60" y1="85" x2="60" y2="98"/><line x1="80" y1="85" x2="80" y2="98"/>
+              <line x1="30" y1="40" x2="17" y2="40"/><line x1="30" y1="55" x2="17" y2="55"/><line x1="30" y1="70" x2="17" y2="70"/>
+              <line x1="90" y1="40" x2="103" y2="40"/><line x1="90" y1="55" x2="103" y2="55"/><line x1="90" y1="70" x2="103" y2="70"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="kick">TECH &middot; EARNINGS</div>
+        <div class="big">$115.8B <span class="up">+103%</span></div>
+        <h3>NVIDIA BEATS FORECASTS</h3>
+        <p>Quarterly revenue more than doubles in its first results since Jensen Huang&rsquo;s exit.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="also">
+    <div class="label">ALSO ON 18 NOVEMBER</div>
+    <div class="items">
+      <div class="item"><b>GAZA &mdash;</b> Israel opens a new &ldquo;concentrated operation&rdquo; in three areas of central Gaza.</div>
+      <div class="item"><b>CYCLONE AKVAN &mdash;</b> Severe storm nears India&rsquo;s Odisha coast; thousands move to shelters.</div>
+    </div>
+  </div>
+
+  <div class="foot">18 NOVEMBER 2026 &middot; EVENTS AS REPORTED THAT DAY &middot; ONE IMAGE, ONE DAY</div>
+</div>
+</body>
+</html>
